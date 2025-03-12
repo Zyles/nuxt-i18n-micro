@@ -6,6 +6,8 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "client:prepare": "nuxt prepare",
+    "generate:en": "nuxi generate --dotenv .env.en",
+    "generate:de": "nuxi generate --dotenv .env.de",
     "generate": "nuxi generate",
     "init": "nuxt prepare",
     "typecheck": "tsc --noEmit",

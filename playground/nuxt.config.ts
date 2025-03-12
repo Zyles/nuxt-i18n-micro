@@ -51,13 +51,15 @@ export default defineNuxtConfig({
     meta: true,
     metaBaseUrl: 'http://localhost:3000/',
     defaultLocale: 'en',
+    fallbackLocale: 'en',
     translationDir: 'locales',
     autoDetectLanguage: true,
     autoDetectPath: '/',
     routesLocaleLinks: routesLocaleLinks,
 
     // 'no_prefix' | 'prefix_except_default' | 'prefix' | 'prefix_and_default'
-    strategy: 'prefix',
+    strategy: 'no_prefix',
+    noPrefixRedirect: true,
     globalLocaleRoutes: {
       // pages/page.vue
       'page': {
@@ -86,5 +88,9 @@ export default defineNuxtConfig({
       const forms = translation.toString().split('|')
       return (count < forms.length ? forms[count].trim() : forms[forms.length - 1].trim()).replace('{count}', count.toString())
     },
+    // site: {
+    //   url: 'https://example.com',
+    //   name: 'My Awesome Website',
+    // },
   },
 })
