@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navigation />
     <p>{{ $t('key1.key1.key1.key1.key1') }}</p>
     <p>{{ $t('hook') }}</p>
     <p>Current Locale: {{ currentLocale }}</p>
@@ -104,6 +105,8 @@
 </template>
 
 <script setup>
+import Navigation from '~/components/navigation.vue'
+
 const { localeRoute, localePath, $getLocales, $getLocale, $switchLocale, $t, $has, $getRouteName, $switchRoute } = useI18n()
 const { $defineI18nRoute } = useNuxtApp()
 
@@ -155,21 +158,21 @@ const toCreationByObjSubPage = () => {
 
 const generatedKeys = ref(generateKeys(4))
 
-$defineI18nRoute({
-  locales: {
-    en: {
-      navigation: {
-        contact: 'Contect en',
-      },
-    },
-    de: {
-      navigation: {
-        contact: 'Contect de',
-      },
-    },
-    ru: {},
-    fr: {},
-    ch: {},
-  },
-})
+// $defineI18nRoute({
+//   locales: {
+//     en: {
+//       navigation: {
+//         contact: 'Contect en',
+//       },
+//     },
+//     de: {
+//       navigation: {
+//         contact: 'Contect de',
+//       },
+//     },
+//     ru: {},
+//     fr: {},
+//     ch: {},
+//   },
+// })
 </script>

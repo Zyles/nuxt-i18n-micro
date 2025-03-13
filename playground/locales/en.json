@@ -1,4 +1,8 @@
 {
+  "navigation": {
+    "title": "Navigation EN",
+    "home": "Home"
+  },
   "test_key": "test_val",
   "key1": {
     "key1": {
